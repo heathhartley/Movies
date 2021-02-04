@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Added Movies";
+
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@model IEnumerable<Movies.Models.EnterMovie>
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+
+
+    <h1> </h1>
+
+    <table>
+        <tr>
+            <th> Title </th>
+            <th> Year </th>
+            <th> Rating </th>
+            <th> Category </th>
+            <th> Note </th>
+            <th> Director </th>
+            <th> Edited </th>
+
+        </tr>
+        @foreach (Movies.Models.EnterMovie x in Model)
+        {
+    <tr>
+        <th>@x.title</th>
+        <th>@x.year</th>
+        <th>@x.rating</th>
+        <th>@x.category</th>
+        <th>@x.note</th>
+        <th>@x.director</th>
+        <th>@x.edited</th>
+
+    </tr>
+
+        }
+
+
+    </table>
